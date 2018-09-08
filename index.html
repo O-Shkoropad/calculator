@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
 <style>
 table, th, td {
     border: 1px solid black;
@@ -17,24 +21,9 @@ button {
     width: 45px;
 }
 </style>
-<script>
-function myFunction(clickedId) {
-    document.calc.result.value+=clickedId;
-}
-function Clear() {
-    document.calc.result.value="";
-}
-function compute() {
-    try{
-    var inp=eval(document.calc.result.value);
-    document.calc.result.value=inp;
-    }catch(err){
-            document.calc.result.value="Bad Input!!";
-    }
-}
-</script>
 </head>
 <body>
+    <script src="js/index.js"></script>
     <form name="calc">
     <input type="text" name="result" readonly>
     </form>
