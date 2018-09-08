@@ -11,8 +11,4 @@ function compute() {
     }catch(err){
             document.calc.result.value="Bad Input!!";
     }
-
-
-
-
- 
+}
