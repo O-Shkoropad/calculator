@@ -1,37 +1,82 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Calculator</title>
-     <script type="text/javascript">
-    function displynum(n1){
-  calcform.txt1.value=calcform.txt1.value+n1;
+<style>
+table, th, td {
+    border: 1px solid black;
+    width: 130px;
+}
+
+#CLEAR {
+    width: 150px;
+}
+
+button {
+    width: 45px;
+}
+</style>
+<script>
+function myFunction(clickedId) {
+    document.calc.result.value+=clickedId;
+}
+function Clear() {
+    document.calc.result.value="";
+}
+function compute() {
+    try{
+    var inp=eval(document.calc.result.value);
+    document.calc.result.value=inp;
+    }catch(err){
+            document.calc.result.value="Bad Input!!";
+    }
 }
 </script>
-   
 </head>
 <body>
-     
-<form name=calcform>
-    <input type=text name=txt1><br>
-    <input type=button name=btn9 value=9 onclick="displynum(btn9.value)">
-    <input type=button name=btn8 value=8 onclick="displynum(btn8.value)">
-    <input type=button name=btn7 value=7 onclick="displynum(btn7.value)">
-     <input type=button name=addbtn value=+ onclick="displynum(addbtn.value")><br>
-     <input type=button name=btn6 value=6 nclick="dicplynum(btn6.value)">
-     <input type=button name=btn5 value=5>
-     <input type=button name=btn4 value=4>
-     <input type=button name=subbtn value=-><br>
-     <input type=button name=btn3 value=3>
-     <input type=button name=btn2 value=2>
-     <input type=button name=btn1 value=1>
-     <input type=button name=btnmul value=*><br>
-     <input type=button name=btn0 value=0>
-     <input type=button name=potbtn value=.>
-     <input type=button name=eqlbtn value==>
-     <input type=button name=divbtn value=/>
-     </form>
+    <form name="calc">
+    <input type="text" name="result" readonly>
+    </form>
+
+<table >
+  <tr>
+    <td><button type="button" id="1" onclick="myFunction(this.id)">1</button></td>
+    <td><button type="button" id="2" onclick="myFunction(this.id)">2</button></td>
+    <td><button type="button" id="3" onclick="myFunction(this.id)">3</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" id="4" onclick="myFunction(this.id)">4</button></td>
+    <td><button type="button" id="5" onclick="myFunction(this.id)">5</button></td>
+    <td><button type="button" id="6" onclick="myFunction(this.id)">6</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" id="7" onclick="myFunction(this.id)">7</button></td>
+    <td><button type="button" id="8" onclick="myFunction(this.id)">8</button></td>
+    <td><button type="button" id="9" onclick="myFunction(this.id)">9</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" id="0" onclick="myFunction(this.id)">0</button></td>
+    <td><button type="button" id="+" onclick="myFunction(this.id)">+</button></td>
+    <td><button type="button" id="-" onclick="myFunction(this.id)">-</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" id="*" onclick="myFunction(this.id)">*</button></td>
+    <td><button type="button" id="/" onclick="myFunction(this.id)">/</button></td>
+    <td><button type="button" id="=" onclick="compute()">=</button></td>
+  </tr>
+</table>
+
+<button type="button" id="CLEAR" onclick="Clear()">CLEAR</button>
+
 </body>
+</html>
+
+
+
+
+ 
+
+
+    </body> 
+
 </html>
