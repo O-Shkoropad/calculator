@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <script type="text/javascript">
+    function displynum(n1){
+  calcform.txt1.value=calcform.txt1.value+n1;
+}
+</script>
+</head>
+<body>
+
+<form name=calcform>
+    <input type=text name=txt1><br>
+    <input type=button name=btn9 value=9 onclick="displynum(btn9.value)">
+    <input type=button name=btn9 value=8 onclick="displynum(btn8.value)">
+    <input type=button name=btn7 value=7 onclick="displynum(btn7.value)">
+     <input type=button name=addbtn value=+ onclick="displynum(addbtn.value")><br>
+     <input type=button name=btn6 value=6 nclick="dicplynum(btn6.value)">
+     <input type=button name=btn5 value=5>
+     <input type=button name=btn4 value=4>
+     <input type=button name=subbtn value=-><br>
+     <input type=button name=btn3 value=3>
+     <input type=button name=btn2 value=2>
+     <input type=button name=btn1 value=1>
+     <input type=button name=btnmul value=*><br>
+     <input type=button name=btn0 value=0>
+     <input type=button name=potbtn value=.>
+     <input type=button name=eqlbtn value==>
+     <input type=button name=divbtn value=/>
+     </form>
+</body>
+</html>
