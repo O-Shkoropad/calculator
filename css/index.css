@@ -1,0 +1,11 @@
+table, th, td {
+    border: 1px solid blue;
+    width: 200px;
+}
+#CLEAR {
+    width: 250px;
+}
+button {
+    width: 75px;
+    color:blue;
+}
