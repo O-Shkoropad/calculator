@@ -6,7 +6,7 @@ function Clear() {
 }
 function compute() {
     try{
-    var inp=eval(document.calc.result.value);
+    let inp=eval(document.calc.result.value);
     document.calc.result.value=inp;
     }catch(err){
            // document.calc.result.value="Bad Input!!";
